@@ -7,11 +7,9 @@ include "includes/header.php";
 include "vendor/autoload.php";
 
 //make sure the data in .env file is globally declared
-//__DIR__ = start from root, and go to where the folder is located 
+
 $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__);
 $dotenv->load();
-
-
 
 //create a new instance of pusher - namespace
 //$pusher = new Pusher\Pusher('key','secret','app-key','options');
@@ -21,7 +19,6 @@ $options = array(
     'useTLS' => true
 );
 
-//$pusher = new Pusher\Pusher('285ccf2680cbed6bb75d','0469948bb282956413f8','1035579',$options);
 
 //pull the information from .env file
 $pusher = new Pusher\Pusher(getenv('APP_KEY'), getenv('APP_SECRET'), getenv('APP_ID'), $options);
