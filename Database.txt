@@ -1,0 +1,125 @@
+Database name: - cms
+
+
+===================================== Table1 : - categories ==================================
+
+CREATE TABLE categories (
+    cat_id int(11) PRIMARY KEY AUTO_INCREMENT not null,
+    cat_title varchar(256) not null
+);
+
+INSERT INTO categories(cat_title) VALUES("Boostrap");
+INSERT INTO categories(cat_title) VALUES("Javascript");
+
+
+
+===================================== Table2: - posts =====================================
+
+CREATE TABLE posts(
+    post_id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    post_category_title varchar(256) not null, /* => To relate (link) data with another table - creating relational tables */
+    post_title varchar(256) not null,
+    post_author varchar(256) not null,
+    post_date TEXT not null,
+    post_image TEXT not null, /* provides a reference to where the image is located*/
+    post_content TEXT not null
+);
+
+ALTER TABLE posts
+    ADD post_tags varchar(256) not null, /* => To search keywords for posts in search engine *
+    ADD post_comment_count int(11) not null, /* => To count comments of a certain post */
+    ADD post_status varchar(256) not null DEFAULT 'draft';
+
+
+INSERT INTO posts(post_category_title,post_title,post_author,post_date,post_image,post_content,post_tags,post_comment_count,post_status) VALUES("Java","Edwin's CMS PHP course is awesome",'John Doe','2015-02-25','','WOW I really like this course','edwin,javascript,php','','draft')
+
+INSERT INTO posts(post_category_title,post_title,post_author,post_date,post_image,post_content,post_tags,post_comment_count,post_status) VALUES("Javascript","Javascript Course Post",'Belinda','2015-02-26','','WOW man this is a really cool post? can you call me?','javascript2, course, class, belinda','','draft')
+
+
+UPDATE posts /* set reference from database to image */
+SET post_image = 'image_1.jpg'
+WHERE post_id = 1;
+
+UPDATE posts 
+SET post_image = 'image_5.jpg'
+WHERE post_id = 2;
+
+ALTER TABLE `posts` ADD `likes` INT(11) NOT NULL AFTER `post_views_count`;
+ALTER TABLE `posts` ADD `dislikes` INT(11) NOT NULL AFTER `likes`;
+
+
+
+===================================== Table 3: - comments =====================================
+
+CREATE TABLE comments(
+    comment_id int(11) PRIMARY KEY AUTO_INCREMENT not null,
+    comment_post_id int(11) not null, /* To match with post_id in posts table */
+    comment_post_title varchar(256) not null, /* To match with post_title in posts table */
+    comment_author varchar(256) not null,
+    comment_email varchar(256) not null,
+    comment_content varchar(256) not null,
+    comment_status varchar(256) not null,
+    comment_date TEXT not null
+);
+
+
+ALTER TABLE `comments` CHANGE `comment_author` `comment_user` VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+ALTER TABLE `comments` ADD `comment_post_author` VARCHAR(255) NOT NULL AFTER `comment_user`;
+
+
+
+===================================== Table 4: - users =====================================
+
+CREATE TABLE users(
+    user_id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    username varchar(256) not null UNIQUE,
+    user_password varchar(256) not null,
+    user_firstname varchar(256) not null,
+    user_lastname varchar(256) not null,
+    user_email varchar(256) not null UNIQUE,
+    user_image TEXT not null,
+    user_role varchar(256) not null
+);
+
+INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `randSalt`) VALUES (NULL, 'rico', '123', 'Rico', 'Suave', 'rico@gmail.com', '', 'admin', '');
+
+
+//to count number of views on posts
+ALTER TABLE `posts` ADD `post_views_count` INT(11) NOT NULL AFTER `post_status`;
+
+
+
+===================================== Table 5: - users_online =====================================
+
+CREATE TABLE users_online(
+    id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    session varchar(256) not null,
+    time int(11) not null,
+    date_login varchar(256) not null
+);
+
+//Create token column in users table - for forgotten password system
+ALTER TABLE `users` ADD `token` TEXT NOT NULL AFTER `user_role`;
+
+
+Table 6: - likes
+
+//to know which user has liked which post 
+
+CREATE TABLE likes(
+    id int(11) AUTO_INCREMENT PRIMARY KEY not null,
+    user_id int(11) not null,
+    post_id int(11) not null
+);
+
+
+
+
+
+
+
+
+
+
+
+ 

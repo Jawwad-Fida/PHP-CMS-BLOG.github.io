@@ -1,0 +1,11 @@
+/*------------PAGINATION (PAGE NUMBER COLOR)------------------- */
+.pager li .active_link {
+    background: #000 !important; /* important keyword overwites anything that will give us another color - for safety*/
+}
+
+
+
+
+
+
+
