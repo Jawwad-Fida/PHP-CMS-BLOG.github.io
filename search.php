@@ -2,7 +2,6 @@
 //we will make this page dynamic - i.e. it will change according to data
 
 include "includes/connect.php";
-
 include "includes/header.php";
 ?>
 
@@ -51,7 +50,6 @@ include "includes/navigation.php";
 
                 mysqli_stmt_execute($stmt);
                 $result = mysqli_stmt_get_result($stmt);
-
 
                 $count = mysqli_num_rows($result);
                 if($count == 0){
@@ -102,14 +100,10 @@ include "includes/navigation.php";
             <?php
                         //turn php on again - (turn loop on again)
                     }
-
-
                 }
             }
             mysqli_stmt_close($stmt);
-
             ?> 
-
 
         </div>
 
