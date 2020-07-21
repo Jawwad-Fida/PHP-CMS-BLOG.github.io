@@ -89,13 +89,9 @@ else{
         mysqli_stmt_close($stmt);
 
         header("Location: login_form_recover.php?success=change");
-
     }
 }
-
 ?>
-
-
 
 
 <!-- Navigation -->
@@ -179,6 +175,3 @@ else{
     <?php include "includes/footer.php";?>
 
 </div> <!-- /.container -->
-
-
-
