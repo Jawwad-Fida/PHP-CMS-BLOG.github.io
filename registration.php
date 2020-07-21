@@ -19,10 +19,8 @@ $options = array(
     'useTLS' => true
 );
 
-
 //pull the information from .env file
 $pusher = new Pusher\Pusher(getenv('APP_KEY'), getenv('APP_SECRET'), getenv('APP_ID'), $options);
-
 
 //------------------------------------------------------
 
@@ -96,7 +94,6 @@ else{
 //-------------------------------------------------------------
 
 
-
 if(isset($_POST['submit'])){
 
     $username = validate($_POST['username']);
@@ -160,7 +157,6 @@ if(isset($_POST['submit'])){
     $user_role = 'Subscriber';
     $passwordHash = password_hash($password,PASSWORD_DEFAULT);
 
-
     $sql = "INSERT INTO users(username,user_password,user_email,user_role) VALUES(?,?,?,?)";   
 
     $stmt = mysqli_stmt_init($conn);
@@ -219,7 +215,7 @@ if(isset($_POST['submit'])){
     </form>
     <!----------------------------------------------------------------->
 
-
+    
     <section id="login">
         <div class="container">
 
@@ -268,6 +264,7 @@ if(isset($_POST['submit'])){
                         }
                         ?>
 
+                        
                         <!--------------- We are using language files (here) ---------------------->
                         <h1 style='text-align:center'><?php echo _REGISTER; ?></h1>
 
