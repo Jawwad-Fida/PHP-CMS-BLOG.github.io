@@ -14,7 +14,6 @@ require 'Classes/config.php';
 ?>
 
 
-
 <?php
 
 function validate($data)
