@@ -29,7 +29,7 @@
     if(isset($_SESSION['role'])){
 
         if($_SESSION['role']){
-            //when logs in, and goes to home page, THE LOGIN FORM WILL BE HIDDEN (until he logs out)
+            //when a user logs in, and goes to home page, THE LOGIN FORM WILL BE HIDDEN (until he logs out)
 
             $username = $_SESSION['user_name'];
             
@@ -81,31 +81,10 @@
     </div>
 
 
-
-
     <!-- Side Widget Well -->
     <?php
     include "widget.php";   
     ?>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
