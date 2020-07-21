@@ -1,17 +1,12 @@
 <?php
-//we will make this page dynamic - i.e. it will change according to data
-
 include "includes/connect.php";
-
 include "includes/header.php";
 ?>
-
 
 <!-- Navigation -->
 <?php
 include "includes/navigation.php";
 ?>
-
 
 <!-- Page Content -->
 <div class="container">
@@ -34,7 +29,6 @@ include "includes/navigation.php";
             $rowNumber = mysqli_num_rows($result);
             echo "<h1 style='color:green;text-align:center'>There are " .$rowNumber ," results</h1>";
 
-
             while($row = mysqli_fetch_assoc($result)){
                 $post_id = $row['post_id'];
                 $post_title = $row['post_title'];
@@ -44,7 +38,6 @@ include "includes/navigation.php";
                 $post_content = substr($row['post_content'],0,250); //shrink content
 
                 //loop to keep picking up data from database
-
                 //turn off php - (turn off loop)
             ?> 
 
@@ -79,7 +72,6 @@ include "includes/navigation.php";
             <hr>
 
             <?php
-                //-------PAGINATION CONTINUE--------------
                 //turn php on again - (turn loop on again)
             }
             ?>
