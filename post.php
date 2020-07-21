@@ -1,12 +1,8 @@
 <?php
-//we will make this page dynamic - i.e. it will change according to data
-
 include "includes/connect.php";
 include "includes/header.php";
 include "admin/functions.php";
-
 ?>
-
 
 <!-- Navigation -->
 <?php
@@ -56,7 +52,6 @@ if(isset($_POST['liked'])){
     }
 
     exit(); //terminate process to finish it up
-
 }
 
 
@@ -96,9 +91,7 @@ if(isset($_POST['disliked'])){
     }
 
     exit(); //terminate process to finish up dislike
-
 }
-
 ?>
 
 
@@ -135,7 +128,6 @@ if(isset($_POST['disliked'])){
                     $post_content = $row['post_content'];
 
                     //loop to keep picking up data from database
-
                     //turn off php - (turn off loop)
             ?> 
 
@@ -162,8 +154,6 @@ if(isset($_POST['disliked'])){
 
             <hr>
             <hr>
-
-            
 
             <!---------------------------- DISPLAY LIKES and DISLIKES ----------------------->
 
@@ -216,8 +206,6 @@ if(isset($_POST['disliked'])){
 
             <!-- --------------------------------------------------------------------------- -->
 
-            
-
             <?php
                     //turn php on again - (turn loop on again)
                 }
@@ -228,7 +216,6 @@ if(isset($_POST['disliked'])){
             }
 
             ?>
-
 
             <!------------------------------ Posted Comments ------------------------------------------>
 
@@ -259,7 +246,6 @@ if(isset($_POST['disliked'])){
                     //echo "<script>alert('Fields cannot be empty')</script>";
                     exit();
                 } 
-
 
                 $sql = "INSERT INTO comments(comment_post_id,comment_post_title,comment_user,comment_post_author,comment_email,comment_content,comment_status,comment_date) VALUES(?,?,?,?,?,?,?,?)";
 
@@ -331,7 +317,6 @@ if(isset($_POST['disliked'])){
             
             <?php } //re-open php tag ?>
             
-            
             <hr>
 
             <?php
@@ -374,7 +359,6 @@ if(isset($_POST['disliked'])){
             }
 
             //Update the comment count in posts table
-
             //This value changes dynamically as comments are approved and deleted
 
             $sql = "UPDATE posts SET post_comment_count={$rowNumber} WHERE post_id={$the_post_id}";
@@ -461,8 +445,3 @@ if(isset($_POST['disliked'])){
         });
 
     </script>
-
-
-
-
-
