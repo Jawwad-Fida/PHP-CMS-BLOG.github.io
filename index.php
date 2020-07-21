@@ -1,6 +1,4 @@
 <?php
-//we will make this page dynamic - i.e. it will change according to data
-
 include "includes/connect.php";
 include "includes/header.php";
 
@@ -52,8 +50,6 @@ include "includes/navigation.php";
 
             }
             
-            //----------First come here, then to pager.php, then to above, and finally set the limit down in display posts----------
-
             //find out how many posts we have
             $sql = "SELECT * FROM posts";
             $result = mysqli_query($conn,$sql);
@@ -62,11 +58,9 @@ include "includes/navigation.php";
             //LIMIT: - 4 posts per page (fixed above)
             $total_posts_per_page = ceil($total_posts/$num_of_posts_per_page); //need an integer - round it up => to get how many posts per page
             
-
-
+            
             //--------------------------DISPLAYING POSTS---------------------------
 
-            //HERE => we will use a special NEW TECHNIQUE - to display dynamic data
 
             //limit posts from  
             $sql="SELECT * FROM posts WHERE post_status='published' LIMIT {$num_of_posts_displayed},{$num_of_posts_per_page}";
@@ -83,10 +77,7 @@ include "includes/navigation.php";
                 $post_content = substr($row['post_content'],0,250);
                 //minimize from 0 to 250 characters
                 
-
                 //loop to keep picking up data from database
-
-                //we do the following steps to display dynamic data
                 //turn off php - (turn off loop)
             ?> 
 
