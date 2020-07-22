@@ -23,7 +23,7 @@
     Like or dislike a post
     Comment on a post (needs approval to display)
     User can edit post without going to control panel
-    Control Panel, Registration, Contact Page
+    Control Panel, Registration, and Contact Page
    
   
 ### Control Panel
