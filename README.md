@@ -60,7 +60,7 @@ PHPMailer resources are provided by [SmartMessages](https://info.smartmessages.n
  
 ### 3) PHP dotenv 
 
-PHP dotenv was created by and is maintained by [Vance Lucas](https://github.com/vlucas) and [Graham Campbell](https://twitter.com/GrahamJCampbell)
+PHP dotenv was created by [Vance Lucas](https://github.com/vlucas) and [Graham Campbell](https://twitter.com/GrahamJCampbell)
 
  * https://github.com/vlucas/phpdotenv
  
