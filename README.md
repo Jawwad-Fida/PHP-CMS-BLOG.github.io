@@ -46,12 +46,22 @@
 
 ## Credits
 
-### Boostrap template used - for home page and admin panel (https://startbootstrap.com/)
+### 1) Boostrap template from [Start Boostrap](https://startbootstrap.com/) used - for home page and admin panel 
 
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+Start Bootstrap was created by and is maintained by [David Miller](https://twitter.com/davidmillerskt)
 
 Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+### 2) PHPMAILER 
+
+PHPMailer resources are provided by [SmartMessages](https://info.smartmessages.net/)
+
+ * https://github.com/PHPMailer/PHPMailer
  
+### 3) PHP dotenv 
+
+PHP dotenv was created by and is maintained by [Vance Lucas](https://github.com/vlucas) and [Graham Campbell](https://github.com/GrahamCampbell)
+
+ * https://github.com/vlucas/phpdotenv
+ 
+### 4) Real Time Notifications using [Pusher](https://github.com/pusher)
