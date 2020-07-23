@@ -1,16 +1,5 @@
 # PHP Project 1 - (CMS) Blogging System
 
-### Boostrap template used - for home page and admin panel (https://startbootstrap.com/)
-
-## Creator
-
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
 ## PROJECT DETAILS 
 
 ### Tables used (MySqli Database)
@@ -53,10 +42,16 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
       PHP dotenv package - protecting credentials online (creating .env file)
       Like and Dislike posts, with Tooltip Feature
       Multiple Language Feature (limited to registration page)
-    
-    
+      
 
-    
-    
-    
+## Credits
 
+### Boostrap template used - for home page and admin panel (https://startbootstrap.com/)
+
+Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
+
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
+
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+ 
