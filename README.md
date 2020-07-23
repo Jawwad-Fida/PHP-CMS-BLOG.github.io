@@ -1,4 +1,4 @@
-### PHP Project 1 - (CMS) Blogging System
+# PHP Project 1 - (CMS) Blogging System
 
 ### Boostrap template used - for home page and admin panel (https://startbootstrap.com/)
 
