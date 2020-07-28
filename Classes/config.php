@@ -10,13 +10,13 @@ class Config{
     
     //all information will be found from ur demo inbox
     
-    const SMTP_HOST = 'smtp.mailtrap.io';
+    const SMTP_HOST = '';
     
-    const SMTP_PORT = 2525;
+    const SMTP_PORT = ;
     
-    const SMTP_USER = 'bf6bad756a6753';
+    const SMTP_USER = '';
     
-    const SMTP_PASSWORD = 'be4cc116e75b70';
+    const SMTP_PASSWORD = '';
     
     
     
